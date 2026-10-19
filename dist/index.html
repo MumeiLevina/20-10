@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#8bc9e9" />
+    <meta name="description" content="Một món quà nhỏ và những lời chúc 20/10 dành cho một người bạn đặc biệt." />
+    <title>Gửi bạn | 20.10</title>
+    <link rel="preload" as="image" href="assets/floral-sky-original.jpg" fetchpriority="high" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#story">Bỏ qua phần mở đầu</a>
+    <video class="ambient-video" id="ambient-video" autoplay muted loop playsinline preload="auto" poster="assets/floral-sky-original.jpg" aria-hidden="true">
+      <source src="assets/floral-sky-motion.mp4" type="video/mp4" />
+    </video>
+    <canvas id="petal-canvas" aria-hidden="true"></canvas>
+
+    <main>
+      <section class="opening scene" id="opening" aria-labelledby="opening-title">
+        <div class="opening__wash" aria-hidden="true"></div>
+        <div class="date-mark" aria-hidden="true">
+          <span>20</span>
+          <i></i>
+          <span>10</span>
+        </div>
+
+        <div class="opening__copy">
+          <p class="eyebrow">Có một điều mình muốn nói</p>
+          <h1 id="opening-title">Món quà nhỏ<br /><em>dành cho bạn</em></h1>
+          <p class="opening__lead">Không cầu kỳ đâu. Chỉ là một khoảng trời đầy hoa và vài lời mình ít khi nói.</p>
+          <button class="primary-button" id="open-gift" type="button">
+            <span>Chạm để mở</span>
+            <span class="button-flower" aria-hidden="true">✦</span>
+          </button>
+        </div>
+
+        <p class="opening__signature" aria-hidden="true">từ một người bạn luôn đứng về phía bạn</p>
+      </section>
+
+      <div class="story" id="story" aria-hidden="true">
+        <section class="intro scene" aria-labelledby="intro-title">
+          <div class="intro__copy reveal">
+            <p class="eyebrow">Ngày Phụ nữ Việt Nam</p>
+            <h2 id="intro-title">Gửi bạn<br />một ngày thật dịu dàng</h2>
+            <p>Nhân ngày 20/10, mình gửi bạn món quà nhỏ này, cùng những lời mà bình thường mình ít khi nói ra.</p>
+          </div>
+          <button class="quiet-button reveal" id="begin-wishes" type="button">Nhận ba lời chúc</button>
+        </section>
+
+        <section class="wishes scene" id="wishes" aria-labelledby="wishes-title">
+          <div class="wishes__heading reveal">
+            <p class="eyebrow">Ba điều mình luôn mong</p>
+            <h2 id="wishes-title">Hái từng cánh hoa nhé</h2>
+            <p>Mỗi bông hoa giữ một lời chúc nhỏ cho bạn.</p>
+          </div>
+
+          <div class="wish-garden" role="group" aria-label="Ba bông hoa chứa lời chúc">
+            <button class="wish-flower reveal" type="button" data-wish="0" aria-expanded="false">
+              <span class="flower-art flower-art--sun" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><b></b></span>
+              <span class="wish-flower__label">Một chút nắng</span>
+              <span class="wish-flower__message">Mong bạn luôn vui vẻ và đủ dịu dàng với chính mình.</span>
+            </button>
+
+            <button class="wish-flower reveal" type="button" data-wish="1" aria-expanded="false">
+              <span class="flower-art flower-art--rose" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><b></b></span>
+              <span class="wish-flower__label">Một chút gan lì</span>
+              <span class="wish-flower__message">Mong bạn tự tin và đủ dũng cảm theo đuổi điều mình yêu thích.</span>
+            </button>
+
+            <button class="wish-flower reveal" type="button" data-wish="2" aria-expanded="false">
+              <span class="flower-art flower-art--lilac" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><b></b></span>
+              <span class="wish-flower__label">Một chút bình yên</span>
+              <span class="wish-flower__message">Mong những ngày không như ý vẫn không làm bạn quên rằng mình xứng đáng được yêu thương.</span>
+            </button>
+          </div>
+
+          <p class="wish-counter" aria-live="polite"><span id="wish-count">0</span>/3 lời chúc đã mở</p>
+        </section>
+
+        <section class="bridge scene" id="bridge" aria-labelledby="bridge-title">
+          <div class="bridge__line reveal" aria-hidden="true"></div>
+          <blockquote class="reveal">
+            <p id="bridge-title">Có thể mình không phải lúc nào cũng hỏi han. Có những hôm mỗi người bận rộn với một nhịp riêng.</p>
+            <p>Nhưng có một điều chưa bao giờ thay đổi...</p>
+          </blockquote>
+        </section>
+
+        <section class="letter-scene scene" id="letter-scene" aria-labelledby="letter-title">
+          <div class="letter-intro reveal">
+            <p class="eyebrow">Lá thư để dành đến cuối</p>
+            <h2 id="letter-title">Có những điều<br />nên được mở thật chậm</h2>
+          </div>
+
+          <div class="letter-wrap reveal">
+            <div class="envelope" id="envelope">
+              <div class="envelope__back"></div>
+              <article class="letter" aria-hidden="true">
+                <div class="letter__content">
+                  <p class="letter__salute">Gửi bạn,</p>
+                  <p>Mình luôn mong những điều tốt đẹp sẽ đến với bạn. Mong bạn mạnh khỏe, tự tin và vẫn giữ được nụ cười rất riêng của mình.</p>
+                  <p>Nếu có những ngày mọi chuyện không như ý, đừng quên rằng bạn không cần phải hoàn hảo để được yêu thương. Cứ nghỉ một chút, rồi bước tiếp theo nhịp của bạn.</p>
+                  <p>Cảm ơn bạn vì đã xuất hiện, vì những câu chuyện linh tinh, những lần lắng nghe và cả những khoảnh khắc bình thường mà vui đến lạ.</p>
+                  <p class="letter__closing">Chúc bạn ngày 20/10 thật nhiều niềm vui, may mắn và hạnh phúc. Mong mỗi ngày của bạn đều có một lý do để mỉm cười. <span aria-label="trái tim">❤</span></p>
+                  <p class="letter__sign">Một người bạn luôn mong bạn vui.</p>
+                </div>
+              </article>
+              <div class="envelope__front"></div>
+              <div class="envelope__flap"></div>
+              <button class="seal" id="open-letter" type="button" aria-label="Mở lá thư">
+                <span aria-hidden="true">20·10</span>
+              </button>
+            </div>
+            <p class="letter-hint" id="letter-hint">Chạm vào con dấu để mở thư</p>
+          </div>
+
+          <button class="finish-button" id="finish" type="button" hidden>Đi đến điều cuối cùng</button>
+        </section>
+
+        <section class="finale scene" id="finale" aria-labelledby="finale-title">
+          <div class="finale__halo" aria-hidden="true"></div>
+          <div class="finale__copy reveal">
+            <p class="eyebrow">20 tháng 10</p>
+            <h2 id="finale-title">Cứ rạng rỡ<br /><em>theo cách của bạn nhé</em></h2>
+            <p>Không chỉ hôm nay, mà là thật nhiều ngày sau nữa.</p>
+            <button class="quiet-button quiet-button--light" id="replay" type="button">Xem lại từ đầu</button>
+          </div>
+          <p class="finale__note">Một món quà nhỏ, được làm bằng rất nhiều thương.</p>
+        </section>
+      </div>
+    </main>
+
+    <div class="transition-bloom" aria-hidden="true"></div>
+    <noscript>Trang quà này cần JavaScript để mở các hiệu ứng tương tác. Hãy bật JavaScript và tải lại trang nhé.</noscript>
+    <script src="script.js" defer></script>
+  </body>
+</html>
